@@ -11,7 +11,10 @@ import "./App.css";
 
 function Home() {
   return (
-    <div className="landing-page">
+    <div
+      className="landing-page"
+      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/background.jpg)` }}
+    >
       <div className="landing-overlay">
         <h1>Paradise Nursery</h1>
 
