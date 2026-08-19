@@ -1,4 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import ProductList from "./components/ProductList";
 import CartItem from "./pages/CartItem";
@@ -17,9 +22,9 @@ function Home() {
 
         <AboutUs />
 
-        <a href="/plants" className="get-started-btn">
+        <Link to="/plants" className="get-started-btn">
           Get Started
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -27,7 +32,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/e-plantShopping">
       <Routes>
         <Route path="/" element={<Home />} />
 
